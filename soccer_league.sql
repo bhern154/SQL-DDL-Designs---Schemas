@@ -44,9 +44,9 @@ CREATE TABLE matches
   location TEXT NOT NULL,
   match_date DATE NOT NULL,
   season_id INTEGER REFERENCES season(id),
-  head_referee_id INTEGER REFERENCES teams(id),
-  assistant_referee_1_id INTEGER REFERENCES teams(id),
-  assistant_referee_2_id INTEGER REFERENCES teams(id)
+  head_referee_id INTEGER REFERENCES referees(id),
+  assistant_referee_1_id INTEGER REFERENCES referees(id),
+  assistant_referee_2_id INTEGER REFERENCES referees(id)
 );
 
 CREATE TABLE results
